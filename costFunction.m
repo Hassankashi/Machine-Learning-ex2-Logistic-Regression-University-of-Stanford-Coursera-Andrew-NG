@@ -11,40 +11,13 @@ m = length(y); % number of training examples
 
 i = 1;
 costSum = 0;
-
-% while i<=m
-%     %mahsa=sigmoid(transpose(theta)*transpose(X));
-%     costSum = costSum + ((y(i))*(log(mahsa))) + (((1 - y(i)))*(log (1 - mahsa)));
-% 
-%     i=i+1;
-% end
 mahsa=0;
 mahsa=sigmoid(transpose(theta)*transpose(X));
 costSum = (log(mahsa))*(y) + (log (1 - mahsa))*(1 - y);
 
-%J = (-1/m) * ((log(mahsa))*y) + (log (1 - mahsa))*(1 - y);
-
 J = (-1/m) * costSum;
 
-%grad = zeros(size(theta));
-
 grad = (1/m) * ((mahsa - transpose(y))*X);
-% ====================== YOUR CODE HERE ======================
-% Instructions: Compute the cost of a particular choice of theta.
-%               You should set J to the cost.
-%               Compute the partial derivatives and set grad to the partial
-%               derivatives of the cost w.r.t. each parameter in theta
-%
-% Note: grad should have the same dimensions as theta
-%
 
-
-
-
-
-
-
-
-% =============================================================
 
 end
